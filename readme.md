@@ -13,14 +13,14 @@
 
 [x] SQLite
 
-[]
+[x] Database model, table and controller (CRUD)
 
-[]
+[x] tinker
 
 ## Features
 
-- Contact form to send an email
-- Send an image that will be hosted on the server
+-
+-
 
 ## Installation
 
@@ -28,6 +28,19 @@ You will need a server to run the application and PHP. For instance Lamp.
 You also will need composer if you want to add dependencies.
 
 To launch the server, go on the directory of this app the launch: __php artisan serve__
+
+To verify it works, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
+
+https://laravel.com/docs/5.7/artisan#tinker
+
+__$ php artisan tinker
+Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman
+>>> $tasks = \App\Task::all();__
+
+__$p = new App\Task;
+$p->title = 'New task';
+$p->description = 'New task descritpion';
+$p->save();__
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
