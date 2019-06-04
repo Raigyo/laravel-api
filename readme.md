@@ -17,14 +17,14 @@
 
 [x] Seeders
 
-[x] Tinker
+[x] Eloquent ORM & Tinker
 
 [x] Unit testing (PHP Unit)
 
 ## Features
 
--
--
+- CRUD using Tinker
+- Unit testing
 
 ## Installation
 
@@ -114,6 +114,8 @@ Launch a test:
 
 [Build an API with Laravel](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69)
 
+[Eloquent ORM](https://laravel.com/docs/5.0/eloquent)
+
 [Tinker: Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
 
 [Use Resource Controller, Artisan and Tinker to set up REST API in Laravel](https://medium.com/employbl/create-a-database-model-and-controller-in-laravel-5-3-b3e15218f6ae)
@@ -123,6 +125,7 @@ Launch a test:
 [Getting Started with PHPUnit in Laravel](https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel)
 
 [How to test specific test class using phpunit in laravel](https://stackoverflow.com/questions/39118117/how-to-test-specific-test-class-using-phpunit-in-laravel)
+
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
