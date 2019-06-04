@@ -65,14 +65,13 @@ To test the app, you can use the Artisan Tinker command. This allows you to dire
 
 or
 
-`>>> $p = \App\Task::findorFail(1);`
+`>>> $p = \App\Task::findorFail(id);`
 
-where '1' is the id number.
 
 **Update**
 
 ~~~~
->>> $p = \App\Task::findorFail(11);
+>>> $p = \App\Task::findorFail(id);
 
 >>> $p->title = "Updated title";
 
@@ -83,7 +82,7 @@ where '1' is the id number.
 
 **Delete**
 ~~~~
->>> $p = \App\Task::findorFail(12);
+>>> $p = \App\Task::findorFail(id);
 
 >>> $p ->delete();
 ~~~~
