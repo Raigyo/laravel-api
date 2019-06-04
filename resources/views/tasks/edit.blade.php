@@ -24,12 +24,12 @@
         @method('PATCH')
         @csrf
         <div class="form-group">
-          <label for="name">Titre:</label>
-          <input type="text" class="form-control" name="title" value={{ $task->title }} />
+          <label for="title">Titre:</label>
+          <input type="text" class="form-control" name="title" value="{{ $task->title }}" />
         </div>
         <div class="form-group">
-          <label for="price">Description:</label>
-          <input type="text" class="form-control" name="description" value={{ $task->description }} />
+          <label for="description">Description:</label>
+          <input type="text" class="form-control" name="description" value="{{ $task->description }}" />
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
       </form>

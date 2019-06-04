@@ -17,8 +17,6 @@ class TaskController extends Controller
     {
       $tasks = Task::all();
       response()->json($tasks);
-      //view('tasks.index', compact('tasks'));
-      //return response()->json($tasks);
       return view('tasks.index', compact('tasks'));
     }
 
@@ -42,7 +40,7 @@ class TaskController extends Controller
         ]);
 
         $task = Task::create($request->all());
-        $parameters = ['success' => 'task has been added Successfully', 'task' => $task];
+        $parameters = ['success' => 'Task has been added successfully', 'task' => $task];
         return redirect('/tasks')->with($parameters);
     }
 
@@ -59,7 +57,7 @@ class TaskController extends Controller
         ]);
 
         $task->update($request->all());
-        $parameters = ['success' => 'Task has been updated', 'task' => $task];
+        $parameters = ['success' => 'Task has been updated successfully', 'task' => $task];
         return redirect('/tasks')->with($parameters);
     }
 
@@ -67,6 +65,6 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         $task->delete();
-        return redirect('/tasks')->with('success', 'task has been deleted Successfully');
+        return redirect('/tasks')->with('success', 'Task has been deleted successfully');
     }
 }

@@ -20,6 +20,10 @@
           margin: 0;
       }
 
+      thead{
+          font-weight: bold;
+      }
+
       .full-height {
           height: 100vh;
       }
@@ -42,6 +46,7 @@
 
       .content {
           text-align: center;
+          margin-top: 25px;
       }
 
       .title {
@@ -51,7 +56,7 @@
       .links > a {
           color: #636b6f;
           padding: 0 25px;
-          font-size: 13px;
+          font-size: 16px;
           font-weight: 600;
           letter-spacing: .1rem;
           text-decoration: none;
@@ -65,10 +70,8 @@
 </head>
 <body>
   <div class="content">
-      <div class="links">
-          <a href="/tasks">Index</a>
-          <a href="/tasks/create">Add</a>
-      </div>
+          <a class="btn btn-primary" href="/tasks">List of tasks</a>
+          <a class="btn btn-danger" href="/tasks/create">Add task</a>
   </div>
   <div class="container">
     @yield('content')
