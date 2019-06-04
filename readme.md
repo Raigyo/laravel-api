@@ -11,8 +11,6 @@
 
 [x] Routes (API)
 
-[x] SQLite
-
 [x] Database model, table and controller (CRUD)
 
 [x] Seeders
@@ -45,7 +43,7 @@ __$php artisan db:seed__
 
 __$ php artisan tinker__
 
-*Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman*
+>*Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman*
 
 **Create**
 __>>> $p = new App\Task;__
