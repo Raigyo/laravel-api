@@ -34,11 +34,11 @@ You also will need composer if you want to add dependencies.
 
 You will need to add an **env** file on the root using the **.env.example** as exemple.
 
-In **env** file change this line and delete
+In **env** file change this line:
 
 `DB_CONNECTION=mysql` by `DB_CONNECTION=sqlite`
 
-Delete:
+And delete:
 
 ~~~~
 DB_HOST=xxx
