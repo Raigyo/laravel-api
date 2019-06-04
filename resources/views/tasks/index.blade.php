@@ -16,19 +16,17 @@
     <thead>
         <tr>
           <td>ID</td>
-          <td>Stock Name</td>
-          <td>Stock Price</td>
-          <td>Stock Quantity</td>
+          <td>Title</td>
+          <td>Description</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($shares as $share)
+        @foreach($tasks as $task)
         <tr>
-            <td>{{$share->id}}</td>
-            <td>{{$share->share_name}}</td>
-            <td>{{$share->share_price}}</td>
-            <td>{{$share->share_qty}}</td>
+            <td>{{$task->id}}</td>
+            <td>{{$task->title}}</td>
+            <td>{{$task->description}}</td>
             <td><a href="{{ route('tasks.edit',$task->id)}}" class="btn btn-primary">Edit</a></td>
             <td>
                 <form action="{{ route('tasks.destroy', $task->id)}}" method="post">
