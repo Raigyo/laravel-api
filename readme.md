@@ -31,31 +31,34 @@ You also will need composer if you want to add dependencies.
 
 To launch the server, go on the directory of this app the launch:
 
-__php artisan serve__
+`php artisan serve`
 
 To test the app, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
 
 ### Seed the database
 
-__$php artisan db:seed__
+`$php artisan db:seed`
 
 ### Use Tinker
 
-__$ php artisan tinker__
+`$ php artisan tinker`
 
 >*Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman*
 
 **Create**
-__>>> $p = new App\Task;__
 
-__>>> $p->title = 'New task';__
+~~~~
+>>> $p = new App\Task;
 
-__>>> $p->description = 'New task descritpion';__
+>>> $p->title = 'New task';
 
-__>>> $p->save();__
+>>> $p->description = 'New task descritpion';
+
+>>> $p->save();
+~~~~
 
 **Read**
-__>>> $tasks = \App\Task::all();__
+`>>> $tasks = \App\Task::all();`
 
 **Update**
 
@@ -66,16 +69,16 @@ __>>> $tasks = \App\Task::all();__
 
 Create a test in the Feature directory...
 
-__$ php artisan make:test UserTest__
+`$ php artisan make:test UserTest`
 
 Create a test in the Unit directory...
 
-__$ php artisan make:test UserTest --unit__
+`$ php artisan make:test UserTest --unit`
 
 In this app, the test has already been created: tests/Feature/TaskTest.php
 
 
-__$ vendor/bin/phpunit__
+`$ vendor/bin/phpunit`
 
 
 ## Useful links
