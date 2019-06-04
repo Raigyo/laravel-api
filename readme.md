@@ -4,7 +4,7 @@
 
 *June 2019*
 
-> 🔨 Laravel - Api. Tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69)
+> 🔨 Laravel - Api. Tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinkle and make some unit testing
 
 
 * * *
@@ -15,7 +15,11 @@
 
 [x] Database model, table and controller (CRUD)
 
-[x] tinker
+[x] Seeders
+
+[x] Tinker
+
+[x] Unit testing (PHP Unit)
 
 ## Features
 
@@ -31,16 +35,51 @@ To launch the server, go on the directory of this app the launch: __php artisan 
 
 To verify it works, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
 
-https://laravel.com/docs/5.7/artisan#tinker
 
-__$ php artisan tinker
-Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman
->>> $tasks = \App\Task::all();__
+### How to use Tinker
+[Tinker Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
 
-__$p = new App\Task;
-$p->title = 'New task';
-$p->description = 'New task descritpion';
-$p->save();__
+__$ php artisan tinker__
+*Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman*
+
+**Create**
+__>>> $p = new App\Task;
+>>> $p->title = 'New task';
+>>> $p->description = 'New task descritpion';
+>>> $p->save();__
+
+**Read**
+__>>> $tasks = \App\Task::all();__
+
+**Update**
+
+**Delete**
+
+https://laravel.com/docs/5.8/testing
+
+
+
+### How to use PHP Unit
+[Tinker Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
+
+Create a test in the Feature directory...
+
+__$ php artisan make:test UserTest__
+
+Create a test in the Unit directory...
+
+__$ php artisan make:test UserTest --unit__
+
+The test has already been created: tests/Feature/TaskTest.php
+
+
+__$ vendor/bin/phpunit__
+
+
+## Useful links
+
+[](https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel)
+[](https://stackoverflow.com/questions/39118117/how-to-test-specific-test-class-using-phpunit-in-laravel)
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
