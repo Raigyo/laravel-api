@@ -15,7 +15,7 @@ class TaskTest extends TestCase
     {
         $tasks = factory(Task::class, 10)->create();
 
-        $response = $this->get(route('tasks.index'));
+        $response = $this->get(route('tasks.all'));
 
         $response->assertStatus(200);
 

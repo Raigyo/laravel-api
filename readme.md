@@ -4,7 +4,7 @@
 
 *June 2019*
 
-> 🔨 Laravel - Api. Tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinkle and make some unit testing
+> 🔨 Laravel - Api. Inpired by the tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinkle and make some unit testing
 
 
 * * *
@@ -37,18 +37,24 @@ __php artisan serve__
 
 To test the app, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
 
+### Seed the database
 
-### How to use Tinker
+__$php artisan db:seed__
+
+### Use Tinker
 
 __$ php artisan tinker__
 
 *Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman*
 
 **Create**
-__>>> $p = new App\Task;
->>> $p->title = 'New task';
->>> $p->description = 'New task descritpion';
->>> $p->save();__
+__>>> $p = new App\Task;__
+
+__>>> $p->title = 'New task';__
+
+__>>> $p->description = 'New task descritpion';__
+
+__>>> $p->save();__
 
 **Read**
 __>>> $tasks = \App\Task::all();__
@@ -57,12 +63,8 @@ __>>> $tasks = \App\Task::all();__
 
 **Delete**
 
-https://laravel.com/docs/5.8/testing
 
-
-
-### How to use PHP Unit
-[Tinker Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
+### Use PHP Unit
 
 Create a test in the Feature directory...
 
@@ -82,7 +84,9 @@ __$ vendor/bin/phpunit__
 
 [Build an API with Laravel](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69)
 
-[Tinker Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
+[Tinker: Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
+
+[Testing: Laravel doc](https://laravel.com/docs/5.8/testing)
 
 [Getting Started with PHPUnit in Laravel](https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel)
 
