@@ -13,6 +13,8 @@
 
 [x] Database model, table and controller (CRUD)
 
+[x] Model Factories
+
 [x] Seeders
 
 [x] Tinker
@@ -31,13 +33,13 @@ You also will need composer if you want to add dependencies.
 
 To launch the server, go on the directory of this app the launch:
 
-`php artisan serve`
+`$ php artisan serve`
 
 To test the app, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
 
 ### Seed the database
 
-`$php artisan db:seed`
+`$ php artisan db:seed`
 
 ### Use Tinker
 
@@ -50,33 +52,60 @@ To test the app, you can use the Artisan Tinker command. This allows you to dire
 ~~~~
 >>> $p = new App\Task;
 
->>> $p->title = 'New task';
+>>> $p->title = 'New title';
 
->>> $p->description = 'New task descritpion';
+>>> $p->description = 'New descritpion';
 
 >>> $p->save();
 ~~~~
 
 **Read**
-`>>> $tasks = \App\Task::all();`
+
+`>>> $p = \App\Task::all();`
+
+or
+
+`>>> $p = \App\Task::findorFail(1);`
+
+where '1' is the id number.
 
 **Update**
 
+~~~~
+>>> $p = \App\Task::findorFail(11);
+
+>>> $p->title = "Updated title";
+
+>>> $p->description = "Updated description";`
+
+>>> $p->save();
+~~~~
+
 **Delete**
+~~~~
+>>> $p = \App\Task::findorFail(12);
+
+>>> $p ->delete();
+~~~~
+
+or
+
+`>>> $p ->forceDelete();`
 
 
 ### Use PHP Unit
 
-Create a test in the Feature directory...
+Create a test 'UserTest' in the Feature directory...
 
 `$ php artisan make:test UserTest`
 
-Create a test in the Unit directory...
+Create a test 'UserTest' in the Unit directory...
 
 `$ php artisan make:test UserTest --unit`
 
 In this app, the test has already been created: tests/Feature/TaskTest.php
 
+Launch a test:
 
 `$ vendor/bin/phpunit`
 
@@ -86,6 +115,8 @@ In this app, the test has already been created: tests/Feature/TaskTest.php
 [Build an API with Laravel](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69)
 
 [Tinker: Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
+
+[Use Resource Controller, Artisan and Tinker to set up REST API in Laravel](https://medium.com/employbl/create-a-database-model-and-controller-in-laravel-5-3-b3e15218f6ae)
 
 [Testing: Laravel doc](https://laravel.com/docs/5.8/testing)
 
