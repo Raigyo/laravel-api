@@ -14,6 +14,11 @@ class TaskController extends Controller
         return response()->json($tasks);
     }
 
+    public function create()
+    {
+        return view('tasks.create');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
