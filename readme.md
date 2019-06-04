@@ -26,7 +26,7 @@
 - CRUD using Tinker
 - Unit testing
 
-## Installation
+## Installation - Backend
 
 You will need a server to run the application and PHP. For instance Lamp.
 You also will need composer if you want to add dependencies.
@@ -50,46 +50,46 @@ To test the app, you can use the Artisan Tinker command. This allows you to dire
 **Create**
 
 ~~~~
->>> $p = new App\Task;
+$p = new App\Task;
 
->>> $p->title = 'New title';
+$p->title = 'New title';
 
->>> $p->description = 'New descritpion';
+$p->description = 'New descritpion';
 
->>> $p->save();
+$p->save();
 ~~~~
 
 **Read**
 
-`>>> $p = \App\Task::all();`
+`$p = \App\Task::all();`
 
 or
 
-`>>> $p = \App\Task::findorFail(id);`
+`$p = \App\Task::findorFail(id);`
 
 
 **Update**
 
 ~~~~
->>> $p = \App\Task::findorFail(id);
+$p = \App\Task::findorFail(11);
 
->>> $p->title = "Updated title";
+$p->title = "Updated title";
 
->>> $p->description = "Updated description";`
+$p->description = "Updated description";
 
->>> $p->save();
+$p->save();
 ~~~~
 
 **Delete**
 ~~~~
->>> $p = \App\Task::findorFail(id);
+$p = \App\Task::findorFail(id);
 
->>> $p ->delete();
+$p ->delete();
 ~~~~
 
 or
 
-`>>> $p ->forceDelete();`
+`$p ->forceDelete();`
 
 
 ### Use PHP Unit
@@ -108,6 +108,13 @@ Launch a test:
 
 `$ vendor/bin/phpunit`
 
+## Frontend
+
+Of course you also can use the client interface:
+
+`$ php artisan serve`
+
+And open: [http://127.0.0.1:8000/tasks](http://127.0.0.1:8000/tasks)
 
 ## Useful links
 
