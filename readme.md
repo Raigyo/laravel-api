@@ -25,6 +25,7 @@
 
 - CRUD using Tinker
 - Unit testing
+- Web interface with CRUD
 
 ## Installation - Backend
 
