@@ -31,15 +31,17 @@
 You will need a server to run the application and PHP. For instance Lamp.
 You also will need composer if you want to add dependencies.
 
-To launch the server, go on the directory of this app the launch: __php artisan serve__
+To launch the server, go on the directory of this app the launch:
 
-To verify it works, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
+__php artisan serve__
+
+To test the app, you can use the Artisan Tinker command. This allows you to directly view and manipulate your database.
 
 
 ### How to use Tinker
-[Tinker Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
 
 __$ php artisan tinker__
+
 *Psy Shell v0.9.9 (PHP 7.1.7 — cli) by Justin Hileman*
 
 **Create**
@@ -70,7 +72,7 @@ Create a test in the Unit directory...
 
 __$ php artisan make:test UserTest --unit__
 
-The test has already been created: tests/Feature/TaskTest.php
+In this app, the test has already been created: tests/Feature/TaskTest.php
 
 
 __$ vendor/bin/phpunit__
@@ -78,8 +80,13 @@ __$ vendor/bin/phpunit__
 
 ## Useful links
 
-[](https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel)
-[](https://stackoverflow.com/questions/39118117/how-to-test-specific-test-class-using-phpunit-in-laravel)
+[Build an API with Laravel](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69)
+
+[Tinker Laravel doc](https://laravel.com/docs/5.7/artisan#tinker)
+
+[Getting Started with PHPUnit in Laravel](https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel)
+
+[How to test specific test class using phpunit in laravel](https://stackoverflow.com/questions/39118117/how-to-test-specific-test-class-using-phpunit-in-laravel)
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
