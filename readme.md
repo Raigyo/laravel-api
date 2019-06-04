@@ -48,10 +48,6 @@ DB_USERNAME=xxx
 DB_PASSWORD=xxx
 ~~~~
 
-Check if this line is present in **database.php**
-
-`'database' => database_path('__DIR__.'/../database/development.sqlite''),`
-
 To **launch the server**, go on the directory of this app the launch:
 
 `$ php artisan serve`
