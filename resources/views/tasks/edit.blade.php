@@ -20,7 +20,7 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('shares.update', $task->id) }}">
+      <form method="post" action="{{ route('tasks.update', $task->id) }}">
         @method('PATCH')
         @csrf
         <div class="form-group">

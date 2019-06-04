@@ -42,11 +42,8 @@ class TaskController extends Controller
         ]);
 
         $task = Task::create($request->all());
-
-        return response()->json([
-            'message' => 'Great success! New task created',
-            'task' => $task
-        ]);
+        $parameters = ['success' => 'task has been added Successfully', 'task' => $task];
+        return redirect('/tasks')->with($parameters);
     }
 
     public function show(Task $task)
@@ -62,20 +59,14 @@ class TaskController extends Controller
         ]);
 
         $task->update($request->all());
-
-        return response()->json([
-            'message' => 'Great success! Task updated',
-            'task' => $task
-        ]); redirect('/tasks')->with('success', 'Stock has been updated');
+        $parameters = ['success' => 'Task has been updated', 'task' => $task];
+        return redirect('/tasks')->with($parameters);
     }
 
 
     public function destroy(Task $task)
     {
         $task->delete();
-
-        return response()->json([
-            'message' => 'Successfully deleted task!'
-        ]); redirect('/taskss')->with('success', 'Stock has been deleted Successfully');
+        return redirect('/tasks')->with('success', 'task has been deleted Successfully');
     }
 }
