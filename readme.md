@@ -32,7 +32,27 @@
 You will need a server to run the application and PHP. For instance Lamp.
 You also will need composer if you want to add dependencies.
 
-To launch the server, go on the directory of this app the launch:
+You will need to add an **env** file on the root using the **.env.example** as exemple.
+
+In **env** file change this line and delete
+
+`DB_CONNECTION=mysql` by `DB_CONNECTION=sqlite`
+
+Delete:
+
+~~~~
+DB_HOST=xxx
+DB_PORT=xxx
+DB_DATABASE=xxx
+DB_USERNAME=xxx
+DB_PASSWORD=xxx
+~~~~
+
+Check if this line is present in **database.php**
+
+`'database' => database_path('__DIR__.'/../database/development.sqlite''),`
+
+To **launch the server**, go on the directory of this app the launch:
 
 `$ php artisan serve`
 
