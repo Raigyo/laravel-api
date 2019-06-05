@@ -1,2 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/
-scheduler: php artisan schedule:daemon
+web: vendor/bin/heroku-php-apache2 public/ heroku ps heroku open
