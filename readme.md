@@ -152,7 +152,7 @@ Create **Procfile** on root, and add:
 
 `web: vendor/bin/heroku-php-apache2 public/`
 
-In the **.gitignore** file in **/database/** remove **database.sqlite**, so you could upload your DB (Heroku will try to find it in **/app/database/database.sqlite**
+In the **.gitignore** file in **/database/** remove **database.sqlite**, so you could upload your DB (Heroku will try to find it in **/app/database/database.sqlite**)
 
 ### .htaccess
 
