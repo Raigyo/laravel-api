@@ -191,6 +191,10 @@ and:
 },
 ~~~
 
+Then run:
+
+`$ composer update`
+
 ## Frontend
 
 Of course you also can use the client interface:
