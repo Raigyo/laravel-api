@@ -4,7 +4,7 @@
 
 *June 2019*
 
-> 🔨 Laravel - Api. Inpired by the tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinkle and make some unit testing
+> 🔨 Laravel - Api. Inpired by the tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinkle and make some unit testing. You can test the app on [Heroku](https://laravel-crud-tasks.herokuapp.com/)
 
 
 * * *
@@ -124,6 +124,72 @@ In this app, the test has already been created: tests/Feature/TaskTest.php
 Launch a test:
 
 `$ vendor/bin/phpunit`
+
+## Deployment on Heroku
+
+### Heroku app
+
+Create a new app on Keroku
+Link your app to the git repo (production branch), so you could synchronise your repo with Heroku
+
+### Env variables
+
+On Heroku, in settings/ Config Vars, add the env variables (don't upload your .env file!!!):
+
+~~~
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=<your key>
+APP_DEBUG=true
+APP_URL=https://<appname>.herokuapp.com/
+DB_DATABASE = /app/database/database.sqlite
+~~~
+
+### Procfile
+
+Create *Procfile* on root, and add:
+
+`web: vendor/bin/heroku-php-apache2 public/`
+
+In the *.gitignore* file in */database/* remove *database.sqlite*, so you could upload your DB
+
+### .htaccess
+
+In .htaccess in root, add:
+
+~~~
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+~~~
+
+### composer.json
+
+In this file you will need:
+
+~~~
+"scripts": {
+    "post-autoload-dump": [
+        "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+        "@php artisan package:discover --ansi"
+    ],
+    "post-root-package-install": [
+        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+        "@php artisan key:generate --ansi"
+    ]
+~~~
+
+and:
+
+~~~
+"require": {
+    "ext-pdo_sqlite": "*"
+},
+~~~
 
 ## Frontend
 
