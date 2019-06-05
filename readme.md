@@ -48,7 +48,7 @@ DB_USERNAME=xxx
 DB_PASSWORD=xxx
 ~~~~
 
-To **launch the server**, go on the directory of this app the launch:
+To **launch the server**, go on the directory of this app then launch:
 
 `$ php artisan serve`
 
