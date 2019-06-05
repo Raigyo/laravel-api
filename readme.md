@@ -134,7 +134,7 @@ Link your app to the git repo (production branch), so you could synchronise your
 
 ### Env variables
 
-On Heroku, in settings/ Config Vars, add the env variables (don't upload your .env file!!!):
+On Heroku, in **settings/ Config Vars**, add the env variables (don't upload your **.env** file!!!):
 
 ~~~
 APP_NAME=Laravel
@@ -147,15 +147,15 @@ DB_DATABASE = /app/database/database.sqlite
 
 ### Procfile
 
-Create *Procfile* on root, and add:
+Create **Procfile** on root, and add:
 
 `web: vendor/bin/heroku-php-apache2 public/`
 
-In the *.gitignore* file in */database/* remove *database.sqlite*, so you could upload your DB
+In the **.gitignore** file in **/database/* remove *database.sqlite**, so you could upload your DB
 
 ### .htaccess
 
-In .htaccess in root, add:
+In **.htaccess** in root, add:
 
 ~~~
 <IfModule mod_rewrite.c>
