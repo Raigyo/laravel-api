@@ -129,8 +129,9 @@ Launch a test:
 
 ### Heroku app
 
-Create a new app on Keroku
-Link your app to the git repo (production branch), so you could synchronise your repo with Heroku
+Create a new app on Keroku.
+
+Link your app to the git repo (production branch), so you could synchronise your repo with Heroku.
 
 ### Env variables
 
