@@ -14,7 +14,7 @@
 
 Route::get('/', function () {
     //return view('tasks.index');
-    $tasks = Task::all();
+    //$tasks = Task::all();
     return view('tasks.index', compact('tasks'));
 });
 
