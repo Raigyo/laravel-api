@@ -69,9 +69,9 @@ To test the app, you can use the Artisan Tinker command. This allows you to dire
 ~~~~
 $p = new App\Task;
 
-$p->title = 'New title';
+$p->title = '<New title>';
 
-$p->description = 'New descritpion';
+$p->description = '<New descritpion>';
 
 $p->save();
 ~~~~
@@ -82,24 +82,24 @@ $p->save();
 
 or
 
-`$p = \App\Task::findorFail(id);`
+`$p = \App\Task::findorFail(<id>);`
 
 
 **Update**
 
 ~~~~
-$p = \App\Task::findorFail(11);
+$p = \App\Task::findorFail(<id>);
 
-$p->title = "Updated title";
+$p->title = '<Updated title>';
 
-$p->description = "Updated description";
+$p->description = '<Updated description>';
 
 $p->save();
 ~~~~
 
 **Delete**
 ~~~~
-$p = \App\Task::findorFail(id);
+$p = \App\Task::findorFail(<id>);
 
 $p ->delete();
 ~~~~
