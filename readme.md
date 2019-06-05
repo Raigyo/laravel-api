@@ -199,6 +199,8 @@ Of course you also can use the client interface:
 
 And open: [http://127.0.0.1:8000/tasks](http://127.0.0.1:8000/tasks)
 
+You can also test the app on [Heroku](https://laravel-crud-tasks.herokuapp.com/)
+
 ## Useful links
 
 [Build an API with Laravel](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69)
