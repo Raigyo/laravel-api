@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tasks.index');
 });
 
 Route::resource('tasks', 'TaskController');
