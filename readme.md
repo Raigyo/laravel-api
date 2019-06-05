@@ -4,7 +4,7 @@
 
 *June 2019*
 
-> 🔨 Laravel - Api. Inpired by the tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinkle and make some unit testing. You can test the app on [Heroku](https://laravel-crud-tasks.herokuapp.com/)
+> 🔨 Laravel - Api. Inpired by the tutorial from [Medium](https://medium.com/employbl/build-an-api-with-laravel-5-7-b3aa16ca2e69). The goal of the exercise is to create a database managed by tinker or a web client and make some unit testing. You can test the web client version on [Heroku](https://laravel-crud-tasks.herokuapp.com/)
 
 
 * * *
@@ -125,7 +125,7 @@ Launch a test:
 
 `$ vendor/bin/phpunit`
 
-## Deployment on Heroku
+## Deployment on Heroku (it's the version on the branch *production* in this repo)
 
 ### Heroku app
 
